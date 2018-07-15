@@ -32,7 +32,7 @@ jupyter lab --port 8888 --ip=0.0.0.0 --no-browser --allow-root --NotebookApp.iop
 
 ### コンテナ削除
 ```
-sudo docker stop shiga; sudo docker rm shiga
+sudo docker stop ${container_name}; sudo docker rm ${container_name}
 ```
 
 ### イメージ削除
