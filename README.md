@@ -17,7 +17,7 @@ sudo docker build -t ${image_name} .
 
 ### 起動
 ```
-sudo docker run -itd -v /home/$(whoami):/workspace -p 8888:8888 --name=${container_name} ${image_name} /bin/bash
+sudo nvidia-docker run -itd -v /home/$(whoami):/workspace -p 8848:8848 --name=${container_name} ${image_name} /bin/bash
 ```
 
 ### コンテナに接続
