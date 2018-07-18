@@ -1,7 +1,7 @@
 FROM nvidia/cuda:9.0-cudnn7-runtime
 
 RUN apt-get update
-RUN apt-get install -y curl git unzip imagemagick bzip2 graphviz vim wget zlib1g-dev libssl-dev
+RUN apt-get install -y curl git unzip imagemagick bzip2 graphviz vim wget zlib1g-dev libssl-dev libsqlite3-dev libbz2-dev libreadline6 libreadline6-dev
 RUN apt-get install -y --allow-downgrades libcudnn7-dev=7.0.5.15-1+cuda9.1 libcudnn7=7.0.5.15-1+cuda9.1 g++ cmake libboost-dev libboost-python-dev libboost-system-dev
 RUN apt-mark hold libcudnn7 libcudnn7-dev
 RUN git clone git://github.com/yyuu/pyenv.git .pyenv
