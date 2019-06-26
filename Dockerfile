@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.0-cudnn7-runtime
+FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
 
 RUN apt-get update
 RUN apt-get install -y curl git unzip imagemagick bzip2 graphviz vim wget zlib1g-dev libssl-dev libsqlite3-dev libbz2-dev libreadline6 libreadline6-dev
