@@ -1,6 +1,6 @@
 # Dockerfile sample for deep learning
 
-nvidia-docker2を用いた深層学習用のDockerfileのサンプル
+nvidia-docker2 を用いた深層学習用の Dockerfile のサンプル
 
 ## チートシート
 
@@ -17,7 +17,7 @@ sudo docker build -t ${image_name} .
 
 ### 起動
 ```
-sudo nvidia-docker run -itd -v /home/$(whoami):/workspace -p 8888:8888 --name=${container_name} ${image_name} /bin/bash
+sudo docker run --runtime -itd -v /home/$(whoami):/workspace -p 8888:8888 --name=${container_name} ${image_name} /bin/bash
 ```
 
 ### コンテナに接続
