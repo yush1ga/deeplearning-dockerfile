@@ -22,10 +22,3 @@ RUN pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp36-cp36
 RUN pip install dask --upgrade
 RUN pip install jupyter jupyterlab
 RUN mkdir -p workspace
-RUN mkdir -p /.vim/colors
-RUN git clone git://github.com/Shougo/neobundle.vim /.vim/bundle/neobundle.vim
-RUN git clone https://github.com/Shougo/vimproc /.vim/bundle/vimproc
-RUN wget https://gist.githubusercontent.com/yush1ga/dc21f496615fd86bbf80a1edbb92c0d5/raw/cf83107659974859471a05a103004b477aedcf40/.vimrc
-RUN git clone https://github.com/tomasr/molokai
-RUN mv /molokai/colors/molokai.vim /.vim/colors/
-RUN rm -rf molokai
