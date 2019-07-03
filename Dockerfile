@@ -1,7 +1,9 @@
 FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
 
 RUN apt update -y
-RUN apt install -y curl git unzip imagemagick bzip2 graphviz vim wget zlib1g-dev libssl-dev libsqlite3-dev libbz2-dev g++ cmake libboost-dev libboost-python-dev libboost-system-dev
+RUN apt install -y curl git unzip imagemagick bzip2 graphviz vim wget zlib1g-dev libssl-dev libsqlite3-dev libbz2-dev g++ cmake libboost-dev libboost-python-dev libboost-system-dev language-pack-ja
+RUN update-locale LANG=ja_JP.UTF-8
+
 RUN git clone git://github.com/pyenv/pyenv.git .pyenv
 
 WORKDIR /
