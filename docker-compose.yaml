@@ -1,0 +1,10 @@
+version: "2.4"
+services:
+  jupyter:
+    build: .
+    runtime: nvidia
+    ports:
+      - 8888:8888
+    volumes:
+      - ./workspace/:/workspace
+    command: jupyter notebook --port 8888 --ip=0.0.0.0 --no-browser --allow-root --NotebookApp.iopub_data_rate_limit=100000000
