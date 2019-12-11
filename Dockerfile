@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
+FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 
 RUN apt update -y
 RUN apt install -y curl git unzip imagemagick bzip2 graphviz vim wget zlib1g-dev libssl-dev libsqlite3-dev libbz2-dev g++ cmake libboost-dev libboost-python-dev libboost-system-dev language-pack-ja liblzma-dev
@@ -22,5 +22,5 @@ RUN pyenv global 3.6.5
 RUN pyenv rehash
 
 RUN pip install --upgrade pip
-RUN pip install keras tensorflow-gpu scikit-learn opencv-contrib-python jupyter jupyter_contrib_nbextensions pandas matplotlib
+RUN pip install keras==2.2.4 tensorflow-gpu==1.14.0 scikit-learn opencv-contrib-python jupyter jupyter_contrib_nbextensions pandas matplotlib
 RUN jupyter contrib nbextension install
