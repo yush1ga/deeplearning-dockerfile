@@ -17,6 +17,8 @@ ENV HOME  /
 ENV PYENV_ROOT /.pyenv
 ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 
+WORKDIR /workspace
+
 RUN pyenv install 3.6.5
 RUN pyenv global 3.6.5
 RUN pyenv rehash
