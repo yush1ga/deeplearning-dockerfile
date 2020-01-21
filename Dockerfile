@@ -1,6 +1,9 @@
 FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 
 RUN apt update -y
+
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt install -y curl git unzip imagemagick bzip2 graphviz vim wget zlib1g-dev libssl-dev libsqlite3-dev libbz2-dev g++ cmake libboost-dev libboost-python-dev libboost-system-dev language-pack-ja liblzma-dev
 
 RUN locale-gen ja_JP.UTF-8
